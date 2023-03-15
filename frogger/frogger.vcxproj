@@ -141,8 +141,10 @@
   <ItemGroup>
     <ClInclude Include="Class.h" />
     <ClInclude Include="globals.h" />
+    <ClInclude Include="Car.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Car.cpp" />
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
