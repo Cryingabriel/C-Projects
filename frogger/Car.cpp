@@ -30,9 +30,12 @@ void car::move() {
 }
 
 bool car::collide(int x, int y) {
-	if (x > xpos+100 & x < xpos) {
-		cout << "DEAD" << endl;
-		return true;
+	if (x > xpos+100) {
+		if (x < xpos) {
+			cout << "DEAD" << endl;
+			return true;
+		}
+		
 	}
 	else
 		return false;
