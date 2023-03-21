@@ -2,6 +2,7 @@
 #include "globals.h"
 #include<SFML/Graphics.hpp>
 #include<iostream>
+#include "Car.h"
 using namespace std;
 int timer = 0;
 
@@ -14,7 +15,12 @@ int main() {
 
 	//SFML boilerplate stuff
 	sf::RenderWindow screen(sf::VideoMode(1000, 1000), "Frogger!");
-
+	vector<car*> cars;
+	for (int i = 0; i < 5; i++)
+		for (int j = 0; j < 1; j++) {
+			cars.push_back(new car(i * 400 + 100, j * 200 + 500, LEFT));
+			cars.push_back(new car(i * 300 + 200, j * 200 + 600, RIGHT));
+		}
 	frog player; //instantiate a frog!
 	while (screen.isOpen()) { //gameloop####################################
 		//input section-----------------------
